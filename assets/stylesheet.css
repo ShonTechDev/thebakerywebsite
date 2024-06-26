@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+/*
+header nav li {
+  float: left;
+  width: 7%;
+  clear: right;
+} */
+
+header nav li {
+  /* float: left;
+  width: 7%;
+  clear: right; */
+  display: inline; /*instead of needing to float, just use display inline?!!! then I can look at spacing, etc.,.  */
+  content: ">";
+}
+
+/* the below helps to place squiggly's inbetween each item  */
+header nav li+li::before{
+  content: "~";
+}
+
+
+li{
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h1, p {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+h1 + p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  clear: none;
+}
+
+
+button {
+  background-color:rgba(71, 71, 71, 0);
+  /* width: 20%; */
+  height:40px;
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+  list-style-type: none;
+  /* margin-left: 570px;
+  margin-top: 30px; */
+  /* align-content: center; look into flexbox */
+  border: none;
+  text-transform: capitalize; /* --why isn't this working? */
+}
+
+.buttoncontainer {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(71, 71, 71, 0.658);
+  width: 13%;
+}
+
+/* li + button {
+  background-color:rgba(159, 156, 156, 0.618)
+} */
+
+
+.topsection {
+  background-image: url('../assets/bakerybreadheadingpic.jpeg');
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  color: white;
+}
